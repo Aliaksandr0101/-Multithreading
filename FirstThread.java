@@ -1,7 +1,4 @@
-import org.w3c.dom.ls.LSOutput;
 
-import java.io.FileWriter;
-import java.sql.SQLOutput;
 import java.util.Date;
 
 public class FirstThread extends Thread{
