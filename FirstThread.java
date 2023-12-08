@@ -11,6 +11,7 @@ public class FirstThread extends Thread{
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 System.err.println("Thread interrupted: " + e.getMessage());
+                System.out.println("");
             }
         }
     }
