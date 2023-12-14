@@ -12,6 +12,7 @@ public class FirstThread extends Thread{
             } catch (InterruptedException e) {
                 System.err.println("Thread interrupted: " + e.getMessage());
                 System.out.println("");
+                System.out.println("");
             }
         }
     }
