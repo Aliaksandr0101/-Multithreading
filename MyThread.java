@@ -1,6 +1,6 @@
 import java.util.function.IntUnaryOperator;
 
-public class SecondExampleThread extends Thread{
+public class MyThread extends Thread{
 
     public void run(){
      int i = 0;
@@ -28,9 +28,9 @@ public class SecondExampleThread extends Thread{
     }
 
     public static void main(String[] args) {
-        SecondExampleThread secondExampleThread = new SecondExampleThread();
+        MyThread myThread = new MyThread();
         MyRunnable myRunnable = new MyRunnable();
-        secondExampleThread.start();
+        myThread.start();
         Thread thread = new Thread(myRunnable);
         thread.start();
     }
