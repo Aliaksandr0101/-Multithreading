@@ -9,7 +9,7 @@ import java.util.Random;
                 try {
                     // Приостанавливаем поток
                     sleep(ChickenEgg.getTimeSleep());
-                    System.out.println("Яйцо");
+                    System.out.println("Яйцо (egg)");
                 }catch(InterruptedException e){}
             }
         }
