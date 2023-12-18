@@ -22,6 +22,7 @@ class CountThread implements Runnable{
 
     @Override
     public void run() {
+        synchronized (res){
         res.x = 1;
         for (int i = 1; i < 5 ; i++) {
             System.out.printf("%s %d \n", Thread.currentThread().getName(), res.x);
@@ -34,4 +35,5 @@ class CountThread implements Runnable{
 
         }
     }
+}
 }
