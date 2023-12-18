@@ -50,7 +50,7 @@ import java.util.Random;
                 System.out.println("Первым появилось яйцо !!!");
             } else {
                 //если оппонент уже закончил высказываться
-                System.out.println("Первой появилась курица !!!");
+                System.out.println("Первой появилась курица !!!!");
             }
             System.out.println("Спор закончен");
         }
