@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ProgramNumberProcessingByThreadTwo {
     public static void main(String[] args) {
         SharedResourceTwo commonResourceTwo = new SharedResourceTwo();
-        System.out.println("enter number");
+        System.out.println("\"pls enter any number from -127 to 127");
         Scanner scanner = new Scanner(System.in);
         commonResourceTwo.numberForWork = scanner.nextInt();
         scanner.close();
