@@ -32,7 +32,7 @@ class ThreadForWorkTwo implements Runnable{
                 System.out.printf("%s %d \n", Thread.currentThread().getName(), sharedResourceTwo.numberForWork);
                 sharedResourceTwo.numberForWork--;
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(150);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
