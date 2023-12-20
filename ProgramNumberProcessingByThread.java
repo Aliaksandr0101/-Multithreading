@@ -15,7 +15,7 @@ public class ProgramNumberProcessingByThread {
 }
 }
 class SharedResource{
-    int numberForWork = 13 ;
+    int numberForWork;
 }
 class ThreadForWork implements Runnable{
     SharedResource sharedResource;
@@ -27,7 +27,7 @@ class ThreadForWork implements Runnable{
     @Override
     public void run() {
 
-        for (int i = 1; i < 4  ; i++) {
+        for (int i = 1; i < 11  ; i++) {
             System.out.printf("%s %d \n", Thread.currentThread().getName(), sharedResource.numberForWork);
             sharedResource.numberForWork--;
             try {
