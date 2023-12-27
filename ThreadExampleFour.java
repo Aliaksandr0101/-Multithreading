@@ -19,14 +19,7 @@ public class ThreadExampleFour {
         }
 
         public synchronized void sum() {
-            if (i == 10) {
-                try {
-                    System.out.println("Жду пока выполнит работу другой поток i = " + i);
-                    wait();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
+           
             i += 10;
             System.out.println("Это поток Sum. Суммирование выполняется первым i = " + i);
             notify();
