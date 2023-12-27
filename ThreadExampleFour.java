@@ -3,51 +3,53 @@ public class ThreadExampleFour {
 
     public static void main(String[] args) {
         SubtractionAndSum subtractionAndSum = new SubtractionAndSum(0);
-        Sum sumresult = new Sum(subtractionAndSum);
-        Sub subresult = new Sub(subtractionAndSum);
-        new Thread(subresult).start();
-        new Thread(sumresult).start();
+        Sum sumResult = new Sum(subtractionAndSum);
+        Subtraction subtractionResult = new Subtraction(subtractionAndSum);
+        new Thread(subtractionResult).start();
+        new Thread(sumResult).start();
     }
 }
 
     class SubtractionAndSum {
-        private int number = 0;
+        private int i;
 
-        public SubtractionAndSum(int number) {
-            this.number = number;
-        }
+        public SubtractionAndSum(int i) {
 
-        public synchronized void sub() {
-            if (number == 10) {
-                try {
-                    System.out.println("gtdhsq" + number);
-                    wait();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-            number -= 5;
-            System.out.println("после вычитания" + number);
-            notify();
+            this.i = i;
         }
 
         public synchronized void sum() {
-            if (number == 0) {
-                System.out.println("fjerjbe" + number);
+            if (i == 10) {
+                try {
+                    System.out.println("Жду пока выполнит работу другой поток i = " + i);
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            i += 10;
+            System.out.println("Это поток Sum. Суммирование выполняется первым i = " + i);
+            notify();
+
+        }
+
+        public synchronized void subtract() {
+            if (i == 0) {
+                System.out.println("Жду, когда выполнит работу поток Sum. Поток Sub зашел первым, а i = " + i);
                 try {
                     wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-            number += 10;
-            System.out.println("после суммирования" + number);
-            notify();
-        }
+                i -= 5;
+                System.out.println("Выполнение работы потока Subtract после notify от потока Sum. i = " + i);
+            }
+
     }
 
     class Sum implements Runnable{
-SubtractionAndSum sum1;
+        SubtractionAndSum sum1;
 
         public Sum(SubtractionAndSum sum1) {
             this.sum1 = sum1;
@@ -56,19 +58,18 @@ SubtractionAndSum sum1;
         @Override
         public void run() {
             sum1.sum();
-
         }
     }
-    class Sub implements Runnable{
+    class Subtraction implements Runnable{
         SubtractionAndSum sub1;
 
-        public Sub(SubtractionAndSum sub1) {
+        public Subtraction(SubtractionAndSum sub1) {
             this.sub1 = sub1;
         }
 
         @Override
         public void run() {
-            sub1.sub();
+            sub1.subtract();
 
         }
 
