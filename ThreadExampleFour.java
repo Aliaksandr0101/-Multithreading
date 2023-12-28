@@ -19,7 +19,7 @@ public class ThreadExampleFour {
         }
 
         public synchronized void sum() {
-           
+
             i += 10;
             System.out.println("Это поток Sum. Суммирование выполняется первым i = " + i);
             notify();
