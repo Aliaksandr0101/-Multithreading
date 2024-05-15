@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,9 +10,9 @@ public class UseNotifyAndWait {
     public static void main(String[] args) {
         new Operator().start();
         new Machine().start();
+
     }
     static class Operator extends Thread{
-
         @Override
         public void run(){
             Scanner scanner = new Scanner(System.in);
