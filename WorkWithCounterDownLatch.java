@@ -32,4 +32,28 @@ class Work implements Runnable{
         countDownLatch.countDown();
 
     }
+    /*import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            Set<Integer> numbers = new HashSet<>();
+
+            System.out.println("Введите 5 различных чисел:");
+            while (numbers.size() < 5) {
+                int num = scanner.nextInt();
+                numbers.add(num);
+            }
+
+            System.out.println("Вы ввели следующие числа:");
+            for (int num : numbers) {
+                // Например, уменьшаем число в 2 раза
+                int processedNum = num / 2;
+                System.out.println(processedNum);
+            }
+        }
+    }*/
+
 }
