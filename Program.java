@@ -15,7 +15,7 @@ class CommonResource{
         for (int i = 1; i < 5 ; i++) {
             System.out.printf("%s %d \n", Thread.currentThread().getName(), x);
             System.out.println();
-            System.out.println();
+
             x++;
             try {
                 Thread.sleep(100);
