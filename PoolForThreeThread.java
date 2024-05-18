@@ -18,7 +18,7 @@ public class PoolForThreeThread {
 
 
         executorService.shutdown();
-        System.out.println("finish");
+
     }
 
 }
@@ -27,6 +27,7 @@ class NameThread extends Thread{
     String nameThread;
 
     public NameThread(String nameThread) {
+
         this.nameThread = nameThread;
     }
 

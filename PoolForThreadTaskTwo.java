@@ -17,7 +17,7 @@ public class PoolForThreadTaskTwo {
 
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
-        System.out.println("Start of threads");
+       
 
         executorService.submit(processThreadOne);
         executorService.submit(processThreadTwo);
@@ -32,7 +32,7 @@ public class PoolForThreadTaskTwo {
 
 
         executorService.shutdown();
-        System.out.println("The end of threads");
+
     }
 
 }
