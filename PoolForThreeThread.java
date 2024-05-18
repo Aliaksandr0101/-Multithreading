@@ -6,25 +6,24 @@ public class PoolForThreeThread {
     public static void main(String[] args) {
 
         NameThread nameThreadOne = new NameThread("Thread 1");
-        NameThread nameTwo = new NameThread("Thread 2");
+        NameThread nameThreadTwo = new NameThread("Thread 2");
         NameThread nameThreadThree = new NameThread("Thread 3");
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        System.out.println("Start threads");
-
+        
         executorService.submit(nameThreadOne);
-        executorService.submit(nameTwo);
+        executorService.submit(nameThreadTwo);
         executorService.submit(nameThreadThree);
 
 
         executorService.shutdown();
-        System.out.println("Completion threads");
+
+
     }
 
 }
 class NameThread extends Thread{
-
 
     String nameThread;
 
