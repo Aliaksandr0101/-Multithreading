@@ -51,6 +51,7 @@ import java.util.Random;
             } else {
                 //если оппонент уже закончил высказываться
                 System.out.println("Первой появилась курица !!!!");
+                System.out.println("Первой появилась курица !!!!");
             }
             System.out.println("Спор закончен");
         }
