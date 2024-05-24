@@ -24,10 +24,10 @@ public class ExampleWithSynchronizedCollection {
 
         try {
             List<Integer> incrementedNumbers = poolThreeStreams.submit(() ->
-                    synchronizedListWithNumbers.parallelStream()
-                            .map(num -> num + 10)
-                            .collect(Collectors.toList())
-            ).get();
+                                               synchronizedListWithNumbers.parallelStream()
+                                               .map(num -> num + 10)
+                                               .collect(Collectors.toList()))
+                                               .get();
             poolThreeStreams.shutdown();
             incrementedNumbers.forEach(System.out::println);
         } catch (InterruptedException e) {
