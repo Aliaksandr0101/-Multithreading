@@ -10,6 +10,7 @@ import java.util.Random;
                     // Приостанавливаем поток
                     sleep(ChickenEgg.getTimeSleep());
                     System.out.println("Яйцо");
+                    System.out.println();
                 }catch(InterruptedException e){}
             }
         }
