@@ -12,6 +12,7 @@ public class ShipsTunnel {
         Random random = new Random();
         System.out.println();
         System.out.println();
+        System.out.println();
 
         // Генерируем случайный индекс для выбора одного из чисел
         int randomIndex = random.nextInt(numbers.length);
